@@ -4,14 +4,33 @@ package users;
 
 service UserService {
   rpc GetUser (UserRequest) returns (UserResponse);
+  rpc AddUser (AddUserRequest) returns (UserResponse);
+  rpc UpdateUser (UpdateUserRequest) returns (UserResponse);
+  rpc DeleteUser (UserRequest) returns (DeleteUserResponse);
 }
 
 message UserRequest {
   int32 id = 1;
 }
 
+message AddUserRequest {
+  string name = 1;
+  int32 age = 2;
+}
+
+message UpdateUserRequest {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
 message UserResponse {
   int32 id = 1;
   string name = 2;
   int32 age = 3;
+}
+
+message DeleteUserResponse {
+  bool success = 1;
+  string message = 2;
 }

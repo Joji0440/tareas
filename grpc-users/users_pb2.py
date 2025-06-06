@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0busers.proto\x12\x05users\"\x19\n\x0bUserRequest\x12\n\n\x02id\x18\x01 \x01(\x05\"5\n\x0cUserResponse\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03\x61ge\x18\x03 \x01(\x05\x32\x41\n\x0bUserService\x12\x32\n\x07GetUser\x12\x12.users.UserRequest\x1a\x13.users.UserResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0busers.proto\x12\x05users\"\x19\n\x0bUserRequest\x12\n\n\x02id\x18\x01 \x01(\x05\"+\n\x0e\x41\x64\x64UserRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03\x61ge\x18\x02 \x01(\x05\":\n\x11UpdateUserRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03\x61ge\x18\x03 \x01(\x05\"5\n\x0cUserResponse\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03\x61ge\x18\x03 \x01(\x05\"6\n\x12\x44\x65leteUserResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0f\n\x07message\x18\x02 \x01(\t2\xf2\x01\n\x0bUserService\x12\x32\n\x07GetUser\x12\x12.users.UserRequest\x1a\x13.users.UserResponse\x12\x35\n\x07\x41\x64\x64User\x12\x15.users.AddUserRequest\x1a\x13.users.UserResponse\x12;\n\nUpdateUser\x12\x18.users.UpdateUserRequest\x1a\x13.users.UserResponse\x12;\n\nDeleteUser\x12\x12.users.UserRequest\x1a\x19.users.DeleteUserResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -33,8 +33,14 @@ if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
   _globals['_USERREQUEST']._serialized_start=22
   _globals['_USERREQUEST']._serialized_end=47
-  _globals['_USERRESPONSE']._serialized_start=49
-  _globals['_USERRESPONSE']._serialized_end=102
-  _globals['_USERSERVICE']._serialized_start=104
-  _globals['_USERSERVICE']._serialized_end=169
+  _globals['_ADDUSERREQUEST']._serialized_start=49
+  _globals['_ADDUSERREQUEST']._serialized_end=92
+  _globals['_UPDATEUSERREQUEST']._serialized_start=94
+  _globals['_UPDATEUSERREQUEST']._serialized_end=152
+  _globals['_USERRESPONSE']._serialized_start=154
+  _globals['_USERRESPONSE']._serialized_end=207
+  _globals['_DELETEUSERRESPONSE']._serialized_start=209
+  _globals['_DELETEUSERRESPONSE']._serialized_end=263
+  _globals['_USERSERVICE']._serialized_start=266
+  _globals['_USERSERVICE']._serialized_end=508
 # @@protoc_insertion_point(module_scope)
