@@ -15,6 +15,7 @@ const typeDefs = gql`
   type Mutation {
     agregarEstudiante(nombre: String!, edad: Int!): Estudiante
     updateEstudiante(id: ID!, nombre: String, edad: Int): Estudiante
+    eliminarEstudiante(id: ID!): Boolean
   }
 `;
 
